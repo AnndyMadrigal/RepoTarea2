@@ -24,7 +24,7 @@ $vendedores = ConsultarVendedoresModel();
     <!-- Hero Start -->
     <div class="container-fluid p-5 mb-5 bg-dark text-secondary">
         <div class="container wow fadeIn" data-wow-delay="0.1s">
-            <h1 class="display-1 text-secondary text-center mb-0">Registra un Vehiculo</h1>
+            <h1 class="display-1 text-secondary text-center mb-0">Registra un Vehículo</h1>
         </div>
     </div>
     <!-- Hero End -->

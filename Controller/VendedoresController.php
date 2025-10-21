@@ -11,7 +11,7 @@
 
         if($resultado)
         {   
-            header("Location: ../../View/Principal/Vendedores.php");
+            header("Location: ../../View/Registro/Vendedores.php");
             exit;
         }
 

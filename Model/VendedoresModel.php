@@ -1,6 +1,6 @@
 <?php 
 
-
+include_once $_SERVER['DOCUMENT_ROOT'] . '/RepoTarea2/Model/UtilesModel.php';
 function RegistrarVendedorModel($identificacion,$nombre,$correoElectronico)
     {
         try

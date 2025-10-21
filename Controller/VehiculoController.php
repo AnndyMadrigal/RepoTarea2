@@ -13,7 +13,7 @@
 
         if($resultado)
         {   
-            header("Location: ../../View/Principal/Vehiculos.php");
+            header("Location: ../../View/Registro/Vehiculos.php");
             exit;
         }
 
