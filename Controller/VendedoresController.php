@@ -11,12 +11,11 @@
 
         if($resultado)
         {   
+            sleep(2);
             header("Location: ../../View/Registro/Vendedores.php");
             exit;
         }
 
-        $_POST["Mensaje"] = "No se ha podido crear la cuenta solicitada";
-        
+        $_POST["Mensaje"] = "No se ha podido registrar al vendedor";
     }
-
 ?>

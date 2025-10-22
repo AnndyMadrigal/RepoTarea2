@@ -13,17 +13,29 @@ ShowCSS();
 <body>
 
     <!-- Header Start -->
-    <?php 
+    <?php
     ShowHeader();
     ?>
     <!-- Header End -->
 
 
     <!-- Hero Start -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                title: "Bienvenido a Car's CR!",
+                icon: "info",
+                showConfirmButton: false,
+                draggable: false,
+                timer: 1500
+            });
+        })
+    </script>
     <div class="container-fluid p-5 mb-5 bg-dark text-secondary">
         <div class="row g-5 py-5">
             <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                <h1 class="display-1 text-secondary text-center mb-0">Bienvenidos a Car's CR!</h1>
+                <h1 class="display-1 text-secondary text-center mb-0">Sobre Car's CR</h1>
             </div>
             <div class="col-lg-12 wow fadeIn">
                 <p class="mb-0">
@@ -39,7 +51,7 @@ ShowCSS();
 
 
     <!-- Footer Start -->
-    <?php 
+    <?php
     ShowFooter();
     ?>
     <!-- Footer End -->

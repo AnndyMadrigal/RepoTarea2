@@ -13,6 +13,7 @@
 
         if($resultado)
         {   
+            sleep(2);
             header("Location: ../../View/Registro/Vehiculos.php");
             exit;
         }

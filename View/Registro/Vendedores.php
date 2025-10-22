@@ -9,13 +9,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/RepoTarea2/Controller/VendedoresContr
 <html lang="en">
 
 <?php
-  ShowCSS();
+ShowCSS();
 ?>
 
 <body>
 
     <!-- Header Start -->
-    <?php 
+    <?php
     ShowHeader();
     ?>
     <!-- Header End -->
@@ -30,41 +30,50 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/RepoTarea2/Controller/VendedoresContr
     <!-- Hero End -->
 
 
-        
 
-        <div class="row g-5  justify-content-center">
-            <div class="col-lg-6">
-                <div class="bg-light rounded h-100 p-5">
+
+    <div class="row g-5  justify-content-center">
+        <div class="col-lg-6">
+            <div class="bg-light rounded h-100 p-5">
 
                 <?php
-                if(isset($_POST["Mensaje"]))
-                {
-                    echo '<div class="alert alert-primary centrado">' . $_POST["Mensaje"] . '</div>';
+                if (isset($_POST["Mensaje"])) {
+                    echo '<div class="alert alert-primary text-center">' . $_POST["Mensaje"] . '</div>';
                 }
                 ?>
-                    <form id="formRegistroVendedor" class="mb-3" action="" method="POST">
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <input type="text" class="form-control bg-white border-0 px-4" id="Cedula" name="Cedula" 
+                <form id="formRegistroVendedor" class="mb-3" action="" method="POST">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <input type="text" class="form-control bg-white border-0 px-4" id="Cedula" name="Cedula"
                                 placeholder="Cedula" onkeyup="ConsultarNombre();" style="height: 55px;">
-                            </div>
-                            <div class="col-6">
-                                <input type="text" class="form-control bg-white border-0 px-4" id="Nombre" name="Nombre" placeholder="Nombre" 
-                                readOnly="true" style="height: 55px;">
-                            </div>
-                            <div class="col-12">
-                                <input type="email" class="form-control bg-white border-0 px-4" id="CorreoElectronico" name="CorreoElectronico" 
-                                placeholder="CorreoElectronico" style="height: 55px;">
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" id="btnRegistrarVendedor" name="btnRegistrarVendedor" 
-                                type="submit">Registrar Vendedor</button>
-                            </div>
                         </div>
-                    </form>
-                </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control bg-white border-0 px-4" id="Nombre" name="Nombre" placeholder="Nombre"
+                                readOnly="true" style="height: 55px;">
+                        </div>
+                        <div class="col-12">
+                            <input type="email" class="form-control bg-white border-0 px-4" id="CorreoElectronico" name="CorreoElectronico"
+                                placeholder="CorreoElectronico" style="height: 55px;">
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" id="btnSweetalert" name="btnRegistrarVendedor"
+                                type="submit">Registrar Vendedor</button>
+                            <script>
+                                document.getElementById('btnSweetalert').addEventListener('click', function() {
+                                    Swal.fire({
+                                        title: "Se a registrado correctamente!",
+                                        icon: "success",
+                                        showConfirmButton: false,
+                                        draggable: true
+                                    });
+                                })
+                            </script>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
+    </div>
     </div>
     <!-- Contact End -->
 
@@ -76,7 +85,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/RepoTarea2/Controller/VendedoresContr
 
 
     <!-- Footer Start -->
-    <?php 
+    <?php
     ShowFooter();
     ?>
     <!-- Footer End -->
@@ -87,7 +96,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/RepoTarea2/Controller/VendedoresContr
 
 
     <?php
-        ShowJS();
+    ShowJS();
     ?>
 </body>
 
